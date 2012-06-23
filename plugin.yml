@@ -3,20 +3,20 @@ main: com.github.NinjaWolf.PearlControl.PearlControl
 version: 1.0
 description: Gives complete control over pearls and everthing they do.
 author: NinjaWolf
-website:
+website: https://github.com/NinjaWolf/PearlControl
 commands:
    reloadpearlcontrol:
       description: Reloads the Config
       usage: /reloadpearlcontrol
       permission: pearlcontrol.reload
       permission-message: You don't have permission to do this.
-   permissions:
+permissions:
       pearlcontrol.reload:
          description: Allows the player to reload the PearlControl Config
          default: op
-      pearlcontrol.pearls.disable:
+      pearlcontrol.bypass.disable:
          description: Allows the player to use pearls even if Pearls are Disabled in Config.
          default: op
-      pearlcontrol.pearls.cooldown:
+      pearlcontrol.bypass.cooldown:
          description: Allows the player to bypass the Cooldown for pearls.
          default: op

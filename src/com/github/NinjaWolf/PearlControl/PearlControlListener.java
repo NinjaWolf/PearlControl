@@ -20,7 +20,7 @@ public class PearlControlListener implements Listener{
  
     @EventHandler
     public void onPlayerUseEP(PlayerInteractEvent e){
-		if(e.getPlayer().hasPermission("pearlcontrol.pearls.disable")){
+		if(e.getPlayer().hasPermission("pearlcontrol.bypass.disable")){
 			return;
 		}
     		if (plugin.getConfig().getBoolean("PearlControl.Pearls.Disabled") == true){
@@ -39,7 +39,7 @@ public class PearlControlListener implements Listener{
         
         Long now = System.currentTimeMillis();
         Player player = e.getPlayer();
-        	if(e.getPlayer().hasPermission("pearlcontrol.pearls.cooldown"))
+        	if(e.getPlayer().hasPermission("pearlcontrol.bypass.cooldown"))
         	{
         		return;
     }

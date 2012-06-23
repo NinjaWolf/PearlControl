@@ -1,1 +1,7 @@
+#Eclipse Files
+.classpath
+.project
+.settings/
+#Extracrap
+bin/
 target/
