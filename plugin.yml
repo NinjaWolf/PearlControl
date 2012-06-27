@@ -5,24 +5,10 @@ description: Gives complete control over pearls and everything they do.
 author: NinjaWolf
 website: https://github.com/NinjaWolf/PearlControl
 commands:
-   pearlcontrol:
-      aliases: [pc, pearl]
+   pc:    
       description: PearlControl Commands
-      usage:
-      /pearlcontrol reload - Reload the PearlControl Config.
-      permission-message: You don't have permission to do this.
+      usage: /pc <command>
 permissions:
-	pearlcontrol.*
-		description: Gives access to all PearlControl commands
-      	children:
-      		pearlcontrol.reload: true
-      		pearlcontrol.bypass*: true
-      	default: op
-    pearlcontrol.bypass.*
-    	description: Gives The player all bypass permissions.
-    	children:
-    		pearlcontrol.bypass.cooldown: true
-    		pearlcontrol.bypass.disable: true
     pearlcontrol.reload:
         description: Allows the player to reload the PearlControl Config.
         default: op
