@@ -41,16 +41,16 @@ public class PearlControl extends JavaPlugin {
 		log.info("[PearlControl] PearlControl is now Disabled.");
 	}
 	// Command stuff
-    Player player = null;
-	public boolean onCommand(CommandSender sender, Command command, String name, String[] args) {
-		if (command.getName().equalsIgnoreCase("reloadpearlcontrol")) {
+	public boolean onCommand(CommandSender sender, Command cmd, String name, String[] args) {
+	    Player player = (Player)sender;
+		if (cmd.getName().equalsIgnoreCase("pearlcontrol")) {
             if (player == null) {
 			reloadConfig();
             log.info("Reload succesful.");
 			return true;
 			}else if (player.hasPermission("pearlcontrol.reload")){
 				 reloadConfig();
-				 sender.sendMessage(ChatColor.DARK_RED + "[" + ChatColor.GREEN+"PearlControl"+ChatColor.DARK_RED+"] has been reloaded");
+				 player.sendMessage(ChatColor.DARK_RED + "[" + ChatColor.GREEN+"PearlControl"+ChatColor.DARK_RED+"] has been reloaded");
                  return true;
 			 } else {
                  player.sendMessage(ChatColor.DARK_RED + "You don't have permission to do that!");
