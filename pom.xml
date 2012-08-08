@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<name>PearlControl</name>
+	<artifactId>PearlControl</artifactId>
+	<groupId>com.github.NinjaWolf.PearlControl.PearlControl</groupId>
+	<description>Gives complete control over pearls and everything they do.</description>
+	<version>1.0</version>
+	<url>https://github.com/NinjaWolf/PearlControl</url>
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>jar</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>org.bukkit</groupId>
+			<artifactId>craftbukkit</artifactId>
+			<version>1.3.1-R1.0</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>bukkit</id>			
+			<name>Bukkit</name>			
+			<url>http://repo.bukkit.org/content/groups/public/</url>
+		</repository>
+	</repositories>
+	<profiles> 
+    <profile> 
+        <id>otherOutputDir</id> 
+        <build> 
+            <directory>C:\Users\Emilio\eclipse\nickguletskii-BukkitPluginTemplate-eb03765\PluginTemplate\bukkit\plugins</directory> 
+        </build>
+    </profile> 
+</profiles>
+	<build>
+		<sourceDirectory>${basedir}/src</sourceDirectory>
+		<resources>
+			<resource>
+				<targetPath>.</targetPath>
+				<filtering>true</filtering>
+				<directory>.</directory>
+				<includes>
+					<include>plugin.yml</include>
+					<include>config.yml</include>
+				</includes>
+			</resource>
+		</resources>
+		<defaultGoal>clean package</defaultGoal>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.1</version>
+					<configuration>
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+						</archive>
+						<finalName>PearlControl</finalName>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.0.2</version>
+					<configuration>
+						<source>1.5</source>
+						<target>1.5</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
