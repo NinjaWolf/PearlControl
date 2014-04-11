@@ -5,7 +5,7 @@ description: Gives complete control over pearls and everything they do.
 author: NinjaWolf
 website: https://github.com/NinjaWolf/PearlControl
 commands:
-   pc:    
+   pearlcontrol:
       description: PearlControl Commands
       usage: /pc <command>
 permissions:
